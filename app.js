@@ -88,6 +88,11 @@ app.listen(8080, () => {
     console.log("App listening on port 8080");
 });
 
+app.get('/', (req, res) => {
+  res.render('home');  // or sendFile() for static HTML
+});
+
+
 // app.get("/", (req, res) => {
 //     res.send("App is working.....");
 // });
