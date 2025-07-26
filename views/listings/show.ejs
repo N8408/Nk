@@ -78,9 +78,11 @@
                                     <div class="card-text">
                                         <%= review.comment.replace(/</g, "&lt;").replace(/>/g, "&gt;") %>
                                     </div>
+                                     <% if(currUser && currUser._id.equals(details.owner._id)) {%>
                                     <form class="mb-3 mt-2" method="post" action="/listings/<%= details._id %>/reviews/<%= review._id %>?_method=DELETE">
                                         <button class="btn-sm btn btn-dark">Delete</button>
                                     </form>
+                                    <%}%>
                                 </div>
                             </div>
                         <% } %>
