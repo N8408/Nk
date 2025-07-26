@@ -19,8 +19,6 @@ const { error } = require("console");
 
 const dbUrl=process.env.ATLASDB_URL;
 
-console.log("[BOOT] MONGO_URI loaded as:", process.env.dbUrl);
-
 async function main() {
     await mongoose.connect(dbUrl);
 }
